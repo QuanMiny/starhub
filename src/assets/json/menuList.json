@@ -1,0 +1,56 @@
+{
+  "code": 200,
+  "data": [
+    {
+      "path": "/dashboard",
+      "name": "dashboard",
+      "component": "/dashboard/index",
+      "meta": {
+        "icon": "zhuye",
+        "title": "管理面板",
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/product",
+      "name": "product",
+      "component": "/product/index",
+      "meta": {
+        "icon": "yingyong",
+        "title": "我的产品",
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/starSearch",
+      "name": "starSearch",
+      "component": "/starSearch/index",
+      "meta": {
+        "icon": "yingyong",
+        "title": "红人搜索",
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/starManage",
+      "name": "starManage",
+      "component": "/starManage/index",
+      "meta": {
+        "icon": "yingyong",
+        "title": "红人管理",
+        "isKeepAlive": true
+      }
+    },
+    {
+      "path": "/cooperation",
+      "name": "cooperation",
+      "component": "/cooperation/index",
+      "meta": {
+        "icon": "yingyong",
+        "title": "合作中心",
+        "isKeepAlive": true
+      }
+    }
+  ],
+  "msg": "成功"
+}

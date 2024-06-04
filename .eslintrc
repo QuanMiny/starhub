@@ -35,6 +35,7 @@
     "no-multiple-empty-lines": ["error", { "max": 1 }], // 不允许多个空行
     "prefer-const": "off", // 使用 let 关键字声明但在初始分配后从未重新分配的变量，要求使用 const
     "no-use-before-define": "off", // 禁止在 函数/类/变量 定义之前使用它们
+    "quotes": ["error", "single"],
 
     // typeScript (https://typescript-eslint.io/rules)
     "@typescript-eslint/no-unused-vars": "error", // 禁止定义未使用的变量
@@ -59,6 +60,6 @@
     "vue/no-v-html": "off", // 禁止使用 v-html
     "vue/require-default-prop": "off", // 此规则要求为每个 prop 为必填时，必须提供默认值
     "vue/multi-word-component-names": "off", // 要求组件名称始终为 “-” 链接的单词
-    "vue/no-setup-props-destructure": "off"// 禁止解构 props 传递给 setup
+    "vue/no-setup-props-destructure": "off" // 禁止解构 props 传递给 setup
   }
 }

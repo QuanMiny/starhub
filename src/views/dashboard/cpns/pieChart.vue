@@ -5,44 +5,44 @@
 </template>
 
 <script setup lang="ts">
-import ECharts from "@/components/ECharts/index.vue"
-import { ECOption } from "@/components/ECharts/config"
+import ECharts from '@/components/ECharts/index.vue'
+import { ECOption } from '@/components/ECharts/config'
 
 const option: ECOption = {
-  color: ["#fa5247", "#2b5aed"],
+  color: ['#fa5247', '#2b5aed'],
   title: {
-    text: "合作数据",
+    text: '合作数据',
     show: true,
-    left: "center",
-    top: "45%",
+    left: 'center',
+    top: '45%',
     textStyle: {
       fontWeight: 600,
       fontSize: 16
     }
   },
   grid: {
-    top: "5%"
+    top: '5%'
   },
   tooltip: {
-    trigger: "item"
+    trigger: 'item'
   },
   series: [
     {
-      type: "pie",
-      radius: ["45%", "70%"],
+      type: 'pie',
+      radius: ['45%', '70%'],
       avoidLabelOverlap: false,
       itemStyle: {
-        borderColor: "#fff",
+        borderColor: '#fff',
         borderWidth: 2
       },
       label: {
         show: true,
         fontSize: 14,
-        formatter: "{b}:{c} " //自定义显示格式(b:name, c:value, d:百分比)
+        formatter: '{b}:{c} ' //自定义显示格式(b:name, c:value, d:百分比)
       },
       data: [
-        { value: 12, name: "合作完成" },
-        { value: 68, name: "合作中" }
+        { value: 12, name: '合作完成' },
+        { value: 68, name: '合作中' }
       ]
     }
   ]

@@ -3,10 +3,10 @@
 </template>
 
 <script setup lang="ts">
-import router from "@/routers"
+import router from '@/routers'
 
 const logout = () => {
-  router.replace("/login")
+  router.replace('/login')
   // ElMessageBox.confirm("您是否确认退出登录?", "温馨提醒", {
   //   confirmButtonText: "确认",
   //   cancelButtonText: "取消",

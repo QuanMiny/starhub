@@ -3,24 +3,16 @@
 </template>
 
 <script setup lang="ts" name="ECharts">
-import {
-  ref,
-  onMounted,
-  onBeforeUnmount,
-  watch,
-  computed,
-  markRaw,
-  nextTick
-} from "vue"
-import { EChartsType, ECElementEvent } from "echarts/core"
-import echarts, { ECOption } from "./config"
-import { useDebounceFn } from "@vueuse/core"
+import { ref, onMounted, onBeforeUnmount, watch, computed, markRaw, nextTick } from 'vue'
+import { EChartsType, ECElementEvent } from 'echarts/core'
+import echarts, { ECOption } from './config'
+import { useDebounceFn } from '@vueuse/core'
 // import { useGlobalStore } from "@/stores/modules/global"
 // import { storeToRefs } from "pinia"
 
 interface Props {
   option: ECOption
-  renderer?: "canvas" | "svg"
+  renderer?: 'canvas' | 'svg'
   resize?: boolean
   theme?: Object | string
   width?: number | string
@@ -29,14 +21,14 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  renderer: "canvas",
+  renderer: 'canvas',
   resize: true
 })
 
 const echartsStyle = computed(() => {
   return props.width || props.height
-    ? { height: props.height + "px", width: props.width + "px" }
-    : { height: "100%", width: "100%" }
+    ? { height: props.height + 'px', width: props.width + 'px' }
+    : { height: '100%', width: '100%' }
 })
 
 const chartRef = ref<HTMLDivElement | HTMLCanvasElement>()
@@ -52,8 +44,7 @@ watch(props, () => {
   draw()
 })
 
-const handleClick = (event: ECElementEvent) =>
-  props.onClick && props.onClick(event)
+const handleClick = (event: ECElementEvent) => props.onClick && props.onClick(event)
 
 const init = () => {
   if (!chartRef.value) return
@@ -65,7 +56,7 @@ const init = () => {
         renderer: props.renderer
       })
     )
-    chartInstance.value.on("click", handleClick)
+    chartInstance.value.on('click', handleClick)
     draw()
   }
 }
@@ -91,12 +82,12 @@ const debouncedResize = useDebounceFn(resize, 300, { maxWait: 800 })
 
 onMounted(() => {
   nextTick(() => init())
-  window.addEventListener("resize", debouncedResize)
+  window.addEventListener('resize', debouncedResize)
 })
 
 onBeforeUnmount(() => {
   chartInstance.value?.dispose()
-  window.removeEventListener("resize", debouncedResize)
+  window.removeEventListener('resize', debouncedResize)
 })
 
 defineExpose({

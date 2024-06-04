@@ -11,11 +11,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue"
-import TopBlock from "@/components/TopBlock/index.vue"
-const searchValue = ref("")
+import { ref } from 'vue'
+import TopBlock from '@/components/TopBlock/index.vue'
+const searchValue = ref('')
 </script>
 
 <style scoped lang="scss">
-@import "./index.scss";
+@import './index.scss';
 </style>

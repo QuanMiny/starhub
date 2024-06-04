@@ -21,13 +21,13 @@
 </template>
 
 <script setup lang="ts">
-import { useGlobalStore } from "@/stores/modules/global"
-import ToolBarLeft from "./cpns/Header/ToolBarLeft.vue"
-import ToolBarRight from "./cpns/Header/ToolBarRight.vue"
-import Menu from "./cpns/Menu/Menu.vue"
+import { useGlobalStore } from '@/stores/modules/global'
+import ToolBarLeft from './cpns/Header/ToolBarLeft.vue'
+import ToolBarRight from './cpns/Header/ToolBarRight.vue'
+import Menu from './cpns/Menu/Menu.vue'
 
-import { computed } from "vue"
-import { useRoute } from "vue-router"
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 
 const route = useRoute()
 const activeMenu = computed(() => route.path)
@@ -38,5 +38,5 @@ const menuList = computed(() => globalStore.menuList)
 </script>
 
 <style scoped lang="scss">
-@import "./index.scss";
+@import './index.scss';
 </style>

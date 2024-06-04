@@ -10,9 +10,9 @@
 <script setup lang="ts">
 // import { computed } from "vue"
 // import { useUserStore } from "@/stores/modules/user"
-import FullScreen from "./cpns/Fullscreen.vue"
-import Avatar from "./cpns/Avatar.vue"
-import Logout from "./cpns/Logout.vue"
+import FullScreen from './cpns/Fullscreen.vue'
+import Avatar from './cpns/Avatar.vue'
+import Logout from './cpns/Logout.vue'
 
 // const userStore = useUserStore()
 // const username = computed(() => userStore.userInfo.username)

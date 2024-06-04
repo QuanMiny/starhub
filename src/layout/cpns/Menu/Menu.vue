@@ -1,9 +1,6 @@
 <template>
   <template v-for="menu in menuList" :key="menu.path">
-    <div
-      :class="['link', menu.path === activeMenu ? 'active' : '']"
-      @click="handleClickMenu(menu)"
-    >
+    <div :class="['link', menu.path === activeMenu ? 'active' : '']" @click="handleClickMenu(menu)">
       <i class="menu-icon iconfont" :class="'icon-' + menu.meta.icon"></i>
       <span class="menu-text sle">{{ menu.meta.title }}</span>
     </div>
@@ -11,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from "vue-router"
+import { useRouter } from 'vue-router'
 
 defineProps<{ activeMenu: string; menuList: Menu.MenuOptions[] }>()
 

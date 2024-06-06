@@ -1,0 +1,20 @@
+.qm-table {
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  .search-box {
+    margin-bottom: 10px;
+  }
+  .table-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .protable {
+      flex: 1;
+    }
+    .pagination {
+      margin-top: 10px;
+      justify-content: right;
+    }
+  }
+}

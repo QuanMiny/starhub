@@ -23,7 +23,7 @@ defineProps({
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  height: 60px;
   .title {
     font-size: 20px;
   }

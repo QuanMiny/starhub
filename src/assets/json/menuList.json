@@ -47,7 +47,7 @@
       "component": "/cooperation/index",
       "meta": {
         "icon": "yingyong",
-        "title": "合作中心",
+        "title": "合作进度",
         "isKeepAlive": true
       }
     }

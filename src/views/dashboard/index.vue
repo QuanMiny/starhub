@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard">
-    <TopBlock title="数据总览" />
+    <TopBlock title="管理面板" />
     <el-row :gutter="12">
       <el-col :xs="24" :sm="12" :md="8">
         <div class="gather-card mb12 bg-1">

@@ -34,12 +34,8 @@
             </el-col>
             <el-col :xs="24" :md="12" :lg="24">
               <div style="display: flex; align-items: center; justify-content: right">
-                <el-button type="primary" @click="onSubmit">
-                  <i class="iconfont icon-sousuo"></i>搜索
-                </el-button>
-                <el-button @click="resetForm(searchFormRef)">
-                  <i class="iconfont icon-shanchu"></i>重置
-                </el-button>
+                <el-button type="primary" @click="onSubmit"> <i class="iconfont icon-sousuo"></i>搜索 </el-button>
+                <el-button @click="resetForm(searchFormRef)"> <i class="iconfont icon-shanchu"></i>重置 </el-button>
               </div>
             </el-col>
           </el-row>
@@ -79,109 +75,109 @@
 </template>
 
 <script setup lang="ts">
-import TopBlock from '@/components/TopBlock/index.vue'
-import { product } from '@/typings'
+import TopBlock from "@/components/TopBlock/index.vue";
+import { product } from "@/typings";
 
-import { FormInstance } from 'element-plus'
-import { ref, reactive } from 'vue'
+import { FormInstance } from "element-plus";
+import { ref, reactive } from "vue";
 
-const searchFormRef = ref<FormInstance>()
+const searchFormRef = ref<FormInstance>();
 
 const searchForm = reactive({
-  date: '',
-  product: '',
-  creator: ''
-})
+  date: "",
+  product: "",
+  creator: ""
+});
 
 const onSubmit = () => {
-  console.log(searchForm)
-}
+  console.log(searchForm);
+};
 
 const resetForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return
-  formEl.resetFields()
-}
+  if (!formEl) return;
+  formEl.resetFields();
+};
 
 const tableData: product[] = [
   {
-    id: '12987122',
-    name: 'xxx',
-    img: 'xxxxx',
-    remark: '备注',
+    id: "12987122",
+    name: "xxx",
+    img: "xxxxx",
+    remark: "备注",
     star_id: 11,
-    plan: 'xxx计划',
+    plan: "xxx计划",
     hasVideo: 1,
     principal: 111,
-    create_time: '2024-01-01 00:00:00'
+    create_time: "2024-01-01 00:00:00"
   },
   {
-    id: '12987122',
-    name: 'xxx',
-    img: 'xxxxx',
-    remark: '备注',
+    id: "12987122",
+    name: "xxx",
+    img: "xxxxx",
+    remark: "备注",
     star_id: 11,
-    plan: 'xxx计划',
+    plan: "xxx计划",
     hasVideo: 1,
     principal: 111,
-    create_time: '2024-01-01 00:00:00'
+    create_time: "2024-01-01 00:00:00"
   },
   {
-    id: '12987122',
-    name: 'xxx',
-    img: 'xxxxx',
-    remark: '备注',
+    id: "12987122",
+    name: "xxx",
+    img: "xxxxx",
+    remark: "备注",
     star_id: 11,
-    plan: 'xxx计划',
+    plan: "xxx计划",
     hasVideo: 1,
     principal: 111,
-    create_time: '2024-01-01 00:00:00'
+    create_time: "2024-01-01 00:00:00"
   },
   {
-    id: '12987122',
-    name: 'xxx',
-    img: 'xxxxx',
-    remark: '备注',
+    id: "12987122",
+    name: "xxx",
+    img: "xxxxx",
+    remark: "备注",
     star_id: 11,
-    plan: 'xxx计划',
+    plan: "xxx计划",
     hasVideo: 1,
     principal: 111,
-    create_time: '2024-01-01 00:00:00'
+    create_time: "2024-01-01 00:00:00"
   },
   {
-    id: '12987122',
-    name: 'xxx',
-    img: 'xxxxx',
-    remark: '备注',
+    id: "12987122",
+    name: "xxx",
+    img: "xxxxx",
+    remark: "备注",
     star_id: 11,
-    plan: 'xxx计划',
+    plan: "xxx计划",
     hasVideo: 1,
     principal: 111,
-    create_time: '2024-01-01 00:00:00'
+    create_time: "2024-01-01 00:00:00"
   },
   {
-    id: '12987122',
-    name: 'xxx',
-    img: 'xxxxx',
-    remark: '备注',
+    id: "12987122",
+    name: "xxx",
+    img: "xxxxx",
+    remark: "备注",
     star_id: 11,
-    plan: 'xxx计划',
+    plan: "xxx计划",
     hasVideo: 1,
     principal: 111,
-    create_time: '2024-01-01 00:00:00'
+    create_time: "2024-01-01 00:00:00"
   }
-]
+];
 
-const currentPage = ref(1)
-const pageSize = ref(10)
+const currentPage = ref(1);
+const pageSize = ref(10);
 
 const handleSizeChange = (val: number) => {
-  console.log(`${val} items per page`)
-}
+  console.log(`${val} items per page`);
+};
 const handleCurrentChange = (val: number) => {
-  console.log(`current page: ${val}`)
-}
+  console.log(`current page: ${val}`);
+};
 </script>
 
 <style scoped lang="scss">
-@import './index.scss';
+@import "./index.scss";
 </style>

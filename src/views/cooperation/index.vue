@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import TopBlock from '@/components/TopBlock/index.vue'
+import TopBlock from "@/components/TopBlock/index.vue";
 </script>
 
 <style scoped lang="scss">
-@import './index.scss';
+@import "./index.scss";
 </style>

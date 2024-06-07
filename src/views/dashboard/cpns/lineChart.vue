@@ -5,65 +5,64 @@
 </template>
 
 <script setup lang="ts">
-import ECharts from '@/components/ECharts/index.vue'
-import { ECOption } from '@/components/ECharts/config'
+import ECharts from "@/components/ECharts/index.vue";
+import { ECOption } from "@/components/ECharts/config";
 
 const data = {
   columns: getDates(),
-  value: ['22', '35', '32', '23', '28', '52', '46']
-}
+  value: ["22", "35", "32", "23", "28", "52", "46"]
+};
 
 function getDates() {
-  let dates = []
+  let dates = [];
   for (let i = 1; i <= 7; i++) {
-    const pastDate = new Date()
-    pastDate.setDate(pastDate.getDate() - i)
+    const pastDate = new Date();
+    pastDate.setDate(pastDate.getDate() - i);
     // 直接格式化为 "MM-dd" 格式
-    const formattedDate =
-      ('0' + (pastDate.getMonth() + 1)).slice(-2) + '-' + ('0' + pastDate.getDate()).slice(-2)
-    dates.unshift(formattedDate)
+    const formattedDate = ("0" + (pastDate.getMonth() + 1)).slice(-2) + "-" + ("0" + pastDate.getDate()).slice(-2);
+    dates.unshift(formattedDate);
   }
-  return dates
+  return dates;
 }
 
 const option: ECOption = {
   tooltip: {
-    trigger: 'axis',
+    trigger: "axis",
     axisPointer: {
-      type: 'none'
+      type: "none"
     }
   },
   legend: {
-    right: '7%',
-    top: '3%',
+    right: "7%",
+    top: "3%",
     itemWidth: 15,
     itemHeight: 6,
-    align: 'auto',
-    icon: 'rect'
+    align: "auto",
+    icon: "rect"
   },
   grid: {
-    top: '20%',
-    left: '10%',
-    right: '7%',
-    bottom: '20%'
+    top: "20%",
+    left: "10%",
+    right: "7%",
+    bottom: "20%"
   },
   xAxis: [
     {
       // name: '上一周',
-      type: 'category',
+      type: "category",
       boundaryGap: true,
       axisLine: {
         show: true,
         lineStyle: {
-          color: '#000'
+          color: "#000"
         }
       },
       axisLabel: {
-        color: '#000',
+        color: "#000",
         padding: 0,
         fontSize: 12,
         formatter: function (data) {
-          return data
+          return data;
         }
       },
       axisTick: {
@@ -73,9 +72,9 @@ const option: ECOption = {
     }
   ],
   yAxis: {
-    name: '(元)',
+    name: "(元)",
     nameTextStyle: {
-      color: '#000',
+      color: "#000",
       fontSize: 12,
       padding: [0, 30, 0, 0]
     },
@@ -84,18 +83,18 @@ const option: ECOption = {
     splitLine: {
       show: true,
       lineStyle: {
-        color: '#eee'
+        color: "#eee"
       }
     },
     axisLine: {
       show: false,
       lineStyle: {
-        color: '#000'
+        color: "#000"
       }
     },
     axisLabel: {
       show: true,
-      color: '#000',
+      color: "#000",
       padding: 0
     },
     axisTick: {
@@ -103,9 +102,9 @@ const option: ECOption = {
     }
   },
   series: {
-    name: '上一周',
-    type: 'line',
-    symbol: 'circle',
+    name: "上一周",
+    type: "line",
+    symbol: "circle",
     showSymbol: true,
     smooth: true,
     lineStyle: {
@@ -115,7 +114,7 @@ const option: ECOption = {
     },
     itemStyle: {
       // color: data.colors[index],
-      borderColor: '#646ace',
+      borderColor: "#646ace",
       borderWidth: 2
     },
     tooltip: {
@@ -123,7 +122,7 @@ const option: ECOption = {
     },
     data: data.value
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .chart-box {

@@ -1,22 +1,22 @@
-import { useGlobalStore } from '@/stores/modules/global'
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import { initDynamicRouter } from './dynamicRouter'
+import { useGlobalStore } from "@/stores/modules/global";
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { initDynamicRouter } from "./dynamicRouter";
 
 const routes: RouteRecordRaw[] = [
   {
-    path: '/',
-    redirect: '/dashboard'
+    path: "/",
+    redirect: "/dashboard"
   },
   {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/views/login/index.vue')
+    path: "/login",
+    name: "login",
+    component: () => import("@/views/login/index.vue")
   },
   {
-    path: '/layout',
-    redirect: '/dashboard', // 重定向主页
-    name: 'layout',
-    component: () => import('@/layout/index.vue'),
+    path: "/layout",
+    redirect: "/dashboard", // 重定向主页
+    name: "layout",
+    component: () => import("@/layout/index.vue"),
     children: [
       // -----非全屏页面动态引入-----
     ]
@@ -26,45 +26,45 @@ const routes: RouteRecordRaw[] = [
 
   // 错误页面
   {
-    path: '/403',
-    name: '403',
-    component: () => import('@/components/ErrorMessage/403.vue'),
+    path: "/403",
+    name: "403",
+    component: () => import("@/components/ErrorMessage/403.vue"),
     meta: {
-      title: '403页面'
+      title: "403页面"
     }
   },
   {
-    path: '/404',
-    name: '404',
-    component: () => import('@/components/ErrorMessage/404.vue'),
+    path: "/404",
+    name: "404",
+    component: () => import("@/components/ErrorMessage/404.vue"),
     meta: {
-      title: '404页面'
+      title: "404页面"
     }
   },
   {
-    path: '/500',
-    name: '500',
-    component: () => import('@/components/ErrorMessage/500.vue'),
+    path: "/500",
+    name: "500",
+    component: () => import("@/components/ErrorMessage/500.vue"),
     meta: {
-      title: '500页面'
+      title: "500页面"
     }
   },
   {
-    path: '/:pathMatch(.*)*',
-    component: () => import('@/components/ErrorMessage/404.vue')
+    path: "/:pathMatch(.*)*",
+    component: () => import("@/components/ErrorMessage/404.vue")
   }
-]
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes
-})
+});
 
 /**
  * @description 路由拦截 beforeEach
  * */
 router.beforeEach(async (to, from, next) => {
-  const globalStore = useGlobalStore()
+  const globalStore = useGlobalStore();
   // const userStore = useUserStore()
   // const authStore = useAuthStore()
 
@@ -80,11 +80,11 @@ router.beforeEach(async (to, from, next) => {
 
   // 如果没有菜单列表，就重新请求菜单列表并添加动态路由
   if (!globalStore.menuList.length) {
-    await initDynamicRouter()
-    return next({ ...to, replace: true })
+    await initDynamicRouter();
+    return next({ ...to, replace: true });
   }
 
-  next()
-})
+  next();
+});
 
-export default router
+export default router;

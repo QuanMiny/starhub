@@ -8,14 +8,14 @@
 </template>
 
 <script setup lang="ts">
-import { useRouter } from 'vue-router'
+import { useRouter } from "vue-router";
 
-defineProps<{ activeMenu: string; menuList: Menu.MenuOptions[] }>()
+defineProps<{ activeMenu: string; menuList: Menu.MenuOptions[] }>();
 
-const router = useRouter()
+const router = useRouter();
 const handleClickMenu = (menu: Menu.MenuOptions) => {
-  router.push(menu.path)
-}
+  router.push(menu.path);
+};
 </script>
 
 <style scoped lang="scss">

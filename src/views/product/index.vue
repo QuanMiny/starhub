@@ -8,7 +8,7 @@
         </el-button>
       </template>
     </TopBlock>
-    <div class="qm-table">
+    <div class="ym-table">
       <div class="card search-box">
         <el-form ref="searchFormRef" :inline="1" :model="searchForm">
           <el-row :gutter="20">

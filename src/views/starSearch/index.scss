@@ -1,0 +1,13 @@
+.ym-search {
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  .search-box {
+    margin-bottom: 10px;
+  }
+  .info-box {
+    flex: 1;
+  }
+}
+
+

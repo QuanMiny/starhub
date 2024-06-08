@@ -7,12 +7,13 @@
           <div class="info">
             <div class="info-name mb4">{{ scope.row.userinfo.name }}</div>
             <div class="info-tags">
+              <!-- 只显示前五个 -->
               <el-tag v-for="(item, index) in scope.row.userinfo.tags.slice(0, 5)" :key="index" round class="mb4 mr4">
                 {{ findLabelByValue(item, categoryList) }}
               </el-tag>
               <el-tooltip v-if="scope.row.userinfo.tags.length >= 6" placement="top" effect="light">
                 <template #content>
-                  <!-- 这里循环生成所有标签 -->
+                  <!-- 这里循环生成剩余所有标签 -->
                   <el-tag v-for="(item, index) in scope.row.userinfo.tags.slice(5)" :key="index" round class="mb4 mr4">
                     {{ findLabelByValue(item, categoryList) }}
                   </el-tag>
@@ -91,7 +92,7 @@ defineProps({
         userinfo: {
           avatar: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
           name: "xxxx",
-          tags: [2, 3, 4, 6, 7, 8, 9, 11]
+          tags: [2, 3, 4, 6, 7, 8, 9, 11, 12]
         },
         dataAnalysis: {
           followers: 11222,

@@ -1,9 +1,8 @@
 @font-face {
   font-family: 'iconfont';  /* Project id 4578671 */
-  src:
-       url('//at.alicdn.com/t/c/font_4578671_8vv31cxsmcu.woff2?t=1717773657932') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4578671_8vv31cxsmcu.woff?t=1717773657932') format('woff'),
-       url('//at.alicdn.com/t/c/font_4578671_8vv31cxsmcu.ttf?t=1717773657932') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_4578671_cx96fytoit.woff2?t=1717860374392') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4578671_cx96fytoit.woff?t=1717860374392') format('woff'),
+       url('//at.alicdn.com/t/c/font_4578671_cx96fytoit.ttf?t=1717860374392') format('truetype');
 }
 
 .iconfont {
@@ -71,13 +70,22 @@
 }
 
 .icon-bilibili:before {
-  content: "\e620";
+  content: "\e66b";
 }
 
 .icon-tiktok:before {
-  content: "\e613";
+  content: "\e77b";
 }
 
 .icon-youtube:before {
-  content: "\ea07";
+  content: "\e883";
 }
+
+.icon-send-email::before {
+  content: "\e702";
+}
+
+.icon-play::before {
+  content: "\e600";
+}
+
